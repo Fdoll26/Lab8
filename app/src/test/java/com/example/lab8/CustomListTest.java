@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 public class CustomListTest {
 
@@ -15,6 +16,7 @@ public class CustomListTest {
     public void setUp() {
         list = new CustomList(null, new ArrayList<>());
     }
+
 
     @Test
     public void dummyTest() {
@@ -27,4 +29,37 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(), listSize + 1);
     }
+
+
+    @Test
+    public void testHasCity(){
+        CustomList testlist = new CustomList(null,new ArrayList<>());
+        City test = new City("Winnipeg", "MN");
+        testlist.addCity(test);
+        assertEquals(testlist.hasCity(test), true);
+    }
+
+    @Test
+    public void testDeleteCity(){
+        CustomList testlist = new CustomList(null,new ArrayList<>());
+        City test = new City("Winnipeg", "MN");
+        City test1 = new City("Edmonton", "AB");
+        testlist.addCity(test);
+        testlist.addCity(test1);
+        testlist.deleteCity(test1);
+        assertEquals(testlist.hasCity(test1), false);
+        assertEquals(list.getCount(), 1);
+    }
+    @Test
+    public void testCountCity(){
+        CustomList testlist = new CustomList(null,new ArrayList<>());
+        City test = new City("Winnipeg", "MN");
+        City test1 = new City("Edmonton", "AB");
+        testlist.addCity(test);
+        testlist.addCity(test1);
+        assertEquals(testlist.getCount(), 2);
+    }
+
+
+
 }
