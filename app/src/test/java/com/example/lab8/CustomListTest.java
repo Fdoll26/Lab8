@@ -28,13 +28,13 @@ public class CustomListTest {
     }
 
 
-//    @Test
-//    public void testHasCity(){
-//        CustomList testlist = new CustomList(null,new ArrayList<>());
-//        City test = new City("Winnipeg", "MN");
-//        testlist.addCity(test);
-//        assertEquals(testlist.hasCity(test), true);
-//    }
+    @Test
+    public void testHasCity(){
+        CustomList testlist = new CustomList(null,new ArrayList<>());
+        City test = new City("Winnipeg", "MN");
+        testlist.addCity(test);
+        assertEquals(testlist.hasCity(test), true);
+    }
 //
 //    @Test
 //    public void testDeleteCity(){
