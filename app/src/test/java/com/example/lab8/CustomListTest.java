@@ -1,9 +1,10 @@
 package com.example.lab8;
 
 import org.junit.Before;
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
