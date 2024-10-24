@@ -47,15 +47,15 @@ public class CustomListTest {
         assertEquals(testlist.hasCity(test1), false);
         assertEquals(testlist.getCount(), 1);
     }
-//    @Test
-//    public void testCountCity(){
-//        CustomList testlist = new CustomList(null,new ArrayList<>());
-//        City test = new City("Winnipeg", "MN");
-//        City test1 = new City("Edmonton", "AB");
-//        testlist.addCity(test);
-//        testlist.addCity(test1);
-//        assertEquals(testlist.getCount(), 2);
-//    }
+    @Test
+    public void testCountCity(){
+        CustomList testlist = new CustomList(null,new ArrayList<>());
+        City test = new City("Winnipeg", "MN");
+        City test1 = new City("Edmonton", "AB");
+        testlist.addCity(test);
+        testlist.addCity(test1);
+        assertEquals(testlist.getCityCount(), 2);
+    }
 
 
 
